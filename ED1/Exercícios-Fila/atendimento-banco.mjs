@@ -30,3 +30,30 @@
     8-) O atendente chamou o próximo cliente. Remova essa pessoa e imprima a fila atualizada.
 
     */
+
+    import Queue from "./Queue.mjs"
+
+    let filaBanco = new Queue()
+
+    filaBanco.enqueue("Cliente 101")
+    filaBanco.enqueue("Cliente 102")
+    filaBanco.enqueue("Cliente 103")
+    filaBanco.enqueue("Cliente 104")
+    filaBanco.enqueue("Cliente 105")
+
+    console.log(filaBanco.print())
+
+    console.log(`\nChamado: ${filaBanco.dequeue()}\n`)
+
+    console.log(filaBanco.print())
+
+    filaBanco.enqueue("Cliente 106")
+    filaBanco.enqueue("Cliente 107")
+
+    console.log(filaBanco.print())
+
+    console.log(`\nPróximo: ${filaBanco.peek()}`)
+
+    console.log(`\nChamado: ${filaBanco.dequeue()}\n`)
+
+    console.log(filaBanco.print())

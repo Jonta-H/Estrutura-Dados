@@ -62,3 +62,38 @@
 /*
     11. Imprima a fila na ordem correta depois de todas as alterações (Utilize o comando correto).
 */
+
+import Queue from "./Queue.mjs";
+
+let filaAtendimento = new Queue()
+
+filaAtendimento.enqueue("José")
+filaAtendimento.enqueue("Sérgio")
+filaAtendimento.enqueue("Joaquim")
+filaAtendimento.enqueue("Maria")
+filaAtendimento.enqueue("João")
+filaAtendimento.enqueue("Samuel")
+filaAtendimento.enqueue("Vicente")
+filaAtendimento.enqueue("Terezinha")
+filaAtendimento.enqueue("Firmino")
+filaAtendimento.enqueue("Toninho")
+filaAtendimento.enqueue("Alexandre")
+
+console.log(filaAtendimento.print())
+
+console.log(`\nChamado: ${filaAtendimento.dequeue()}\n`)
+
+console.log(filaAtendimento.print())
+
+filaAtendimento.enqueue("Rafael")
+filaAtendimento.enqueue("Isabela")
+filaAtendimento.enqueue("Cauã")
+
+console.log(filaAtendimento.print())
+
+let proximaPessoa = filaAtendimento.peek()
+console.log(`Próximo a ser atendido: ${proximaPessoa}`)
+
+console.log(`\nChamado: ${filaAtendimento.dequeue()}\n`)
+
+console.log(filaAtendimento.print())

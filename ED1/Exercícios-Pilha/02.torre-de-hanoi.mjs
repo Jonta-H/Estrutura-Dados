@@ -15,3 +15,55 @@
     conforme a imagem "Torre-Impressao.png". DEPOIS das movimentações, a TorreA deve estar com os discos na
     ordem [1,2,3,4] e as outras duas torres (TorreB e TorreC) devem estar vazias.
 */
+
+import Stack from "./Stack.mjs"
+
+let TorreA = new Stack(), TorreB = new Stack(), TorreC = new Stack()
+
+TorreB.push(1); TorreB.push(2); TorreB.push(3); TorreB.push(4);
+console.log(`---- ANTES ----\nTorre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreC.push(TorreB.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreA.push(TorreB.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreA.push(TorreC.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreC.push(TorreB.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreB.push(TorreA.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreC.push(TorreA.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreC.push(TorreB.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreA.push(TorreB.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreA.push(TorreC.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreB.push(TorreC.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreB.push(TorreA.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreA.push(TorreC.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreC.push(TorreB.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreA.push(TorreB.pop())
+console.log(`Torre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)
+
+TorreA.push(TorreC.pop())
+console.log(`---- DEPOIS ----\nTorre A: ${TorreA.print()}\nTorre B: ${TorreB.print()}\nTorre C: ${TorreC.print()}\n`)

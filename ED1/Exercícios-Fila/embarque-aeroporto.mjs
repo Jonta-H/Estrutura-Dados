@@ -30,4 +30,33 @@
 
     8-) O próximo passageiro foi chamado. Remova essa pessoa e imprima a fila atualizada.
 
-    */
+*/
+
+    import Queue from "./Queue.mjs";
+
+    let filaAeroporto = new Queue()
+
+    filaAeroporto.enqueue("Passageiro A")
+    filaAeroporto.enqueue("Passageiro B")
+    filaAeroporto.enqueue("Passageiro C")
+    filaAeroporto.enqueue("Passageiro D")
+    filaAeroporto.enqueue("Passageiro E")
+
+    console.log(filaAeroporto.print())
+
+    console.log(`Embarcando: ${filaAeroporto.dequeue()}`)
+
+    console.log(filaAeroporto.print())
+
+    filaAeroporto.enqueue("Passageiro F")
+    filaAeroporto.enqueue("Passageiro G")
+    filaAeroporto.enqueue("Passageiro H")
+
+    console.log(filaAeroporto.print())
+
+    let proximoEmbarque = filaAeroporto.peek()
+    console.log(`\nPróximo a embarcar: ${proximoEmbarque}`)
+
+    console.log(`Embarcando: ${filaAeroporto.dequeue()}`)
+
+    console.log(filaAeroporto.print())

@@ -9,7 +9,7 @@ pilha.push(25)
 pilha.push(30)
 pilha.push(35)
 
-console.log("EStá vazio? " + pilha.isEmpty)
+console.log("Está vazio? " + pilha.isEmpty)
 
 let removido = pilha.pop()
 
