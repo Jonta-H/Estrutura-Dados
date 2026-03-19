@@ -27,30 +27,96 @@ export default class LinkedList {
     }
 
     // Método para inserir em qualquer posição
-    insert(pos, val){
+    insert(pos, val) {
         // Cria um nodo para armazenar o valor pretendido
         const inserted = new Node(val)
 
         // 1º Caso: a lista está vazia
-        if(this.isEmpty){
+        if (this.isEmpty) {
             this.#head = inserted
-            this.#tail = inserted    
+            this.#tail = inserted
         }
 
         // 2º Caso: lista não vazia, inserção na primeira posição
-        else if(pos === 0){
+        else if (pos === 0) {
             inserted.next = this.#head
             this.#head = inserted
         }
 
         // 3º Caso: inserção no final da lista
-        else if(pos >= this.#count){
+        else if (pos >= this.#count) {
             this.#tail.next = inserted
             this.#tail = inserted
         }
 
-        
+        // 4º Caso: inserção no meio da lista
+        else {
+            let before = this.#head
+            for (let i = 1; i < pos; i++) {
+                before = before.next
+            }
+
+            let after = before.next
+
+            inserted.next = after
+            before.next = inserted
+        }
+
 
         this.count++
+    }
+
+    // método para inserção na primeira posição (atalho)
+    insertHead(val) {
+        this.insert(0, val)
+    }
+
+    //método para inserção na ultima posição (atalho)
+    insertTail(val) {
+        this.insert(this.#count, val)
+    }
+
+    remove(pos) {
+        //1º Caso: a lista está vazia ou a posição informada está fora dos limites da lista
+        if (this.isEmpty || pos < 0 || pos > this.#count - 1) {
+            return undefined
+        }
+
+        let removed
+
+        // 2º Caso: remoção do inicio da lista
+        if (pos === 0) {
+            removed = this.#head
+            this.#head = this.#head.next
+
+            if (this.#count === 1) {
+                this.#tail = null
+            }
+        }
+
+        // 3º Caso: remoção de nodo intermediário ou final
+        else{
+            let before = this.#head
+
+            for(let i = 1; i < pos; i++){
+                before = before.next
+            }
+
+            removed = before.next
+
+            let after = removed.next
+
+            before.next = after
+
+            // atualiza o tail em caso de remoção
+            if(pos === this.#count -1){
+                this.#tail = before
+            }
+        }
+
+
+        this.#count--
+
+        return removed.data
     }
 }
