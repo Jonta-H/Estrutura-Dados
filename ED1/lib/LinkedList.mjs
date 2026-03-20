@@ -114,9 +114,74 @@ export default class LinkedList {
             }
         }
 
-
         this.#count--
 
         return removed.data
+    }
+
+    // método para remover o primeiro nodo da lista (atalho)
+    removeHead() {
+        return this.remove(0)
+    }
+
+    // método para remover o último nodo da lista (atalho)
+    removeTail(){
+        return this.remove(this.#count -1)
+    }
+
+    indexOf(val){
+        // 1º Caso: lista vazia
+        if(this.isEmpty){
+            return -1
+        }
+        
+        let node = this.#head
+        
+        for(let i = 0; i < this.#count; i++){
+            if(node.data === val){
+                return i
+            }
+            node = node.next
+        }
+
+        return -1
+    }
+
+    peek(pos){
+        // 1º Caso: lista vazia ou posição fora dos limites
+        if(this.isEmpty || pos < 0 || pos > this.#count -1){
+            return undefined
+        }
+
+        // 2º Caso: busca sequencial
+        let node = this.#head
+        for(let i = 0; i < pos; i++){
+            node = node.next
+        }
+        return node.data
+    }
+
+    peekHead(){
+        return this.peek(0)
+    }
+
+    peekTail(){
+        return this.peek(this.#count-1)
+    }
+
+    print(){
+        let output = "{ "
+        let node = this.#head
+
+        for(let i = 0; i < this.#count; i++){
+            if(output !== "{ "){
+                output+= ", "
+            }
+            output += `[${i}]: ${node.data}`
+            node = node.next
+        }
+        output += " }"
+        
+        return output
     }
 }
