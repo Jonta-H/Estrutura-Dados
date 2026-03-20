@@ -63,7 +63,7 @@ export default class LinkedList {
         }
 
 
-        this.count++
+        this.#count++
     }
 
     // método para inserção na primeira posição (atalho)
@@ -181,7 +181,7 @@ export default class LinkedList {
             node = node.next
         }
         output += " }"
-        
-        return output
+
+        return output + ` Count: ${this.#count}`
     }
 }
