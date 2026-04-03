@@ -1,6 +1,6 @@
 import Stack from './Stack.mjs'
 
-let pilha = new Stack()
+let pilha = new Stack(5)
 
 pilha.push("Zé")
 pilha.push("Jão")

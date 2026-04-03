@@ -1,15 +1,21 @@
 export default class Stack{
     #data // vetor privado
-    #historyData
+    #historyData 
+    #maxSize
 
-    constructor(){
+    constructor(maxSize = 0){
         this.#data = []
         this.#historyData = []
+        this.#maxSize = maxSize
     }
 
     // método para inserção no vetor
     // método pode ser criado com qualquer nome
     push(valor){
+        if (this.#data.length >= this.#maxSize){
+            console.log("Limite máximo atingido.")
+            return
+        }
         this.#data.push(valor)
     }
 
@@ -28,6 +34,10 @@ export default class Stack{
     // verifica se está vazio
     get isEmpty(){
         return this.#data.length === 0
+    }
+
+    get maxSize(){
+        return this.#maxSize
     }
 
     history(){

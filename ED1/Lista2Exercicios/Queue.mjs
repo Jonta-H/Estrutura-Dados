@@ -1,10 +1,11 @@
 export default class Queue{
 
     #data // vetor privado
-    #operationCount = 0
+    #operationCount;
 
     constructor(){
         this.#data = []
+        this.#operationCount = 0;
     }
 
     // método para inserção na fila
@@ -15,7 +16,9 @@ export default class Queue{
 
     // método para remoção na fila
     dequeue(){
-        this.#operationCount++
+        if(!this.isEmpty){      // verifica se a fila esta vazia antes da contagem
+            this.#operationCount++
+        }
         return this.#data.shift()
     }
 
