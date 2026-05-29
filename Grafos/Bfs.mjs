@@ -17,8 +17,10 @@ function bfs(grafo, inicio){
     // Método .has() realiza busca instantânea 
     const visitados = new Set();
 
+    // Cria uma nova instância da fila
     const fila = new Queue();
     
+    // Insere o no de partida no final da fila
     fila.enqueue(inicio);
 
     // Criar um laço que rode enquanto a fila não estiver vazia
@@ -30,6 +32,14 @@ function bfs(grafo, inicio){
             console.log(no);
 
             visitados.add(no);
+
+            // Percorre cada um dos vizinhos do nó atual da lista de adjacentes
+            for (const vizinho of grafo[no]){
+                if(!visitados.has(vizinho)){
+                    // Se o vizinho ainda não foi visitado, coloca-o no final da fila
+                    fila.enqueue(vizinho);
+                }
+            }
         }
     }
 }
