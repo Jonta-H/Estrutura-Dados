@@ -1,0 +1,97 @@
+===== TESTES DE INSERÇÃO
+Aluno 2026050 cadastrado com sucesso!
+Aluno 2026020 cadastrado com sucesso!
+Aluno 2026080 cadastrado com sucesso!
+Aluno 2026010 cadastrado com sucesso!
+Aluno 2026030 cadastrado com sucesso!
+Aluno 2026070 cadastrado com sucesso!
+Aluno 2026090 cadastrado com sucesso!
+Aluno 2026025 cadastrado com sucesso!
+Aluno 2026075 cadastrado com sucesso!
+Aluno 2026095 cadastrado com sucesso!
+RA 2026030 já cadastrado.
+
+
+===== TESTES DE LISTAGEM
+Lista de alunos:
+┌─────────┬─────────┬────────────────────────┬───────┐
+│ (index) │ ra      │ nome                   │ media │
+├─────────┼─────────┼────────────────────────┼───────┤
+│ 0       │ 2026010 │ 'Pedro Henrique Alves' │ 6.5   │
+│ 1       │ 2026020 │ 'João Silva'           │ 7     │
+│ 2       │ 2026025 │ 'Luiza Martins'        │ 9.5   │
+│ 3       │ 2026030 │ 'João Silva'           │ 8     │
+│ 4       │ 2026050 │ 'Ana Beatriz Souza'    │ 8.5   │
+│ 5       │ 2026070 │ 'Camila Ferreira'      │ 7.5   │
+│ 6       │ 2026075 │ 'Bruno Carvalho'       │ 6     │
+│ 7       │ 2026080 │ 'Mariana Lopes'        │ 9     │
+│ 8       │ 2026090 │ 'Rafael Costa'         │ 5.5   │
+│ 9       │ 2026095 │ 'Fernanda Ribeiro'     │ 8     │
+└─────────┴─────────┴────────────────────────┴───────┘
+Quantidade de alunos: 10
+Altura da árvore: 3
+Quantidade de folhas: 4
+Média: 7.55
+
+
+===== TESTES DE BUSCA
+RA: 2026075  NOME: Bruno Carvalho  MEDIA: 6
+RA não encontrado
+
+
+===== TESTES DE REMOÇÃO
+Removido: 2026025
+┌─────────┬─────────┬────────────────────────┬───────┐
+│ (index) │ ra      │ nome                   │ media │
+├─────────┼─────────┼────────────────────────┼───────┤
+│ 0       │ 2026010 │ 'Pedro Henrique Alves' │ 6.5   │
+│ 1       │ 2026020 │ 'João Silva'           │ 7     │
+│ 2       │ 2026030 │ 'João Silva'           │ 8     │
+│ 3       │ 2026050 │ 'Ana Beatriz Souza'    │ 8.5   │
+│ 4       │ 2026070 │ 'Camila Ferreira'      │ 7.5   │
+│ 5       │ 2026075 │ 'Bruno Carvalho'       │ 6     │
+│ 6       │ 2026080 │ 'Mariana Lopes'        │ 9     │
+│ 7       │ 2026090 │ 'Rafael Costa'         │ 5.5   │
+│ 8       │ 2026095 │ 'Fernanda Ribeiro'     │ 8     │
+└─────────┴─────────┴────────────────────────┴───────┘
+Removido: 2026090
+┌─────────┬─────────┬────────────────────────┬───────┐
+│ (index) │ ra      │ nome                   │ media │
+├─────────┼─────────┼────────────────────────┼───────┤
+│ 0       │ 2026010 │ 'Pedro Henrique Alves' │ 6.5   │
+│ 1       │ 2026020 │ 'João Silva'           │ 7     │
+│ 2       │ 2026030 │ 'João Silva'           │ 8     │
+│ 3       │ 2026050 │ 'Ana Beatriz Souza'    │ 8.5   │
+│ 4       │ 2026070 │ 'Camila Ferreira'      │ 7.5   │
+│ 5       │ 2026075 │ 'Bruno Carvalho'       │ 6     │
+│ 6       │ 2026080 │ 'Mariana Lopes'        │ 9     │
+│ 7       │ 2026095 │ 'Fernanda Ribeiro'     │ 8     │
+└─────────┴─────────┴────────────────────────┴───────┘
+Removido: 2026050
+┌─────────┬─────────┬────────────────────────┬───────┐
+│ (index) │ ra      │ nome                   │ media │
+├─────────┼─────────┼────────────────────────┼───────┤
+│ 0       │ 2026010 │ 'Pedro Henrique Alves' │ 6.5   │
+│ 1       │ 2026020 │ 'João Silva'           │ 7     │
+│ 2       │ 2026030 │ 'João Silva'           │ 8     │
+│ 3       │ 2026070 │ 'Camila Ferreira'      │ 7.5   │
+│ 4       │ 2026075 │ 'Bruno Carvalho'       │ 6     │
+│ 5       │ 2026080 │ 'Mariana Lopes'        │ 9     │
+│ 6       │ 2026095 │ 'Fernanda Ribeiro'     │ 8     │
+└─────────┴─────────┴────────────────────────┴───────┘
+
+
+===== NOVA LISTA DE ALUNOS
+┌─────────┬─────────┬────────────────────────┬───────┐
+│ (index) │ ra      │ nome                   │ media │
+├─────────┼─────────┼────────────────────────┼───────┤
+│ 0       │ 2026070 │ 'Camila Ferreira'      │ 7.5   │
+│ 1       │ 2026020 │ 'João Silva'           │ 7     │
+│ 2       │ 2026010 │ 'Pedro Henrique Alves' │ 6.5   │
+│ 3       │ 2026030 │ 'João Silva'           │ 8     │
+│ 4       │ 2026080 │ 'Mariana Lopes'        │ 9     │
+│ 5       │ 2026075 │ 'Bruno Carvalho'       │ 6     │
+│ 6       │ 2026095 │ 'Fernanda Ribeiro'     │ 8     │
+└─────────┴─────────┴────────────────────────┴───────┘
+Quantidade de alunos: 7
+Altura da árvore: 2
