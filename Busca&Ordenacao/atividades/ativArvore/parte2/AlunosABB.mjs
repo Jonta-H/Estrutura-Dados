@@ -97,11 +97,13 @@ export default class AlunosABB {
           return root;
       }
 
+      // Caso 1: nodo folha, só remove
       if (root.left === null && root.right === null) {
           root = null;
           return root;
       }
 
+      // Caso 2: grau 1, o filho ocupa o lugar do nodo
       if (root.left !== null && root.right === null) {
           root = root.left;
           return root;
@@ -112,6 +114,7 @@ export default class AlunosABB {
           return root;
       }
 
+      // Caso 3: grau 2, usa o menor da direita no lugar e remove ele de lá
       const newRoot = this.#minNode(root.right);
 
       root.data = newRoot.data;

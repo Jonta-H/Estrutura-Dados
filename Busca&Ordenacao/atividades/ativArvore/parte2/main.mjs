@@ -63,7 +63,7 @@ console.log()
 
 
 // ======= TESTES DE REMOÇÃO
-// Remoção nodo folha
+// Remoção nodo folha (grau 0)
 console.log("===== TESTES DE REMOÇÃO")
 alunos.remove(2026025)
 listagem = []
@@ -94,8 +94,8 @@ console.log()
 
 // ======= PERCURSO PRÉ-ORDEM DA ÁRVORE FINAL
 listagem = []
-console.log("===== NOVA LISTA DE ALUNOS")
-alunos.preOrderTraversal(aluno => listagem.push(aluno))
-console.table(listagem)
+console.log("===== PRÉ-ORDEM DA ÁRVORE FINAL")
+alunos.preOrderTraversal(aluno => listagem.push(aluno.ra))
+console.log("Pré-ordem (RA): " + listagem)
 console.log("Quantidade de alunos:", alunos.count())
 console.log("Altura da árvore:", alunos.height())

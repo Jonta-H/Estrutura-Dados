@@ -84,7 +84,7 @@ arvore3.insert(3)
 arvore3.insert(4)
 arvore3.insert(5)
 
-console.log("Altura =>", arvore3.height())
+console.log("a) Altura =>", arvore3.height())
 
 /* 
     a. Inserir valores dessa forma transforma a Arvore Binária em uma
@@ -105,6 +105,7 @@ arvore4.insert(80)
 arvore4.insert(20)
 arvore4.insert(40)
 
+console.log("b) Comparando com a árvore do Exercício 1")
 preOrder = []
 arvore1.preOrderTraversal(val => preOrder.push(val))
 console.log("Arvore 1 pre-ordem => " + preOrder)
@@ -133,6 +134,7 @@ arvore5.insert(70)
 arvore5.insert(20)
 arvore5.insert(30)
 
+console.log("c) Outra ordem de inserção")
 preOrder = []
 arvore5.preOrderTraversal(val => preOrder.push(val))
 console.log("Arvore 5 pre-ordem => " + preOrder)
